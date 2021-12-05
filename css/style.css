@@ -90,6 +90,7 @@ a {
   justify-content: center;
   background: none;
   border: none;
+  display: none;
 }
 
 .burger {
@@ -186,9 +187,9 @@ a {
   margin-right: 0;
 }
 
-.menu-nav {
+/*.menu-nav {
   display: none;
-}
+}*/
 
 .trend::before {
   position: absolute;
@@ -631,9 +632,6 @@ visibility: hidden;
   color: #999999;
 }
 @media (max-width: 640px) {
-  .page {
-    flex-wrap: wrap;
-  }
   .trend {
     width: 100%;
     margin-bottom: 3px;
@@ -641,22 +639,27 @@ visibility: hidden;
   .trend:last-child {
     margin-bottom: 0;
   }
-  .wrapper-trend {
-    flex-wrap: wrap;
-  }
-  .menu-nav {
-    display: none;
-  }
-  .posts {
+  .posts,.product,
+  .wrapper-trend, .page {
     flex-wrap: wrap;
   }
   .main-content {
     width: 100%;
   }
-  .product {
-    flex-wrap: wrap;
+  .menu-nav {
+    display: none;
+  }
+  .nav {
+    width: 35px;
+    height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
   }
 }
+
 @media (min-width: 641px) and (max-width: 1200px) {
   .trend {
     width: calc(50% - 3px);
@@ -670,26 +673,28 @@ visibility: hidden;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .card:nth-child(3) {
-    margin-top: 262px;
+  .menu-nav {
+    display: none;
   }
-  /*.card {
-margin-right: auto;
-  }*/
+  .nav {
+    width: 35px;
+    height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+  }
 }
 
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
   .nav {
     display: none;
   }
-}
+}*/
  @media (orientation:portrait) and (min-width: 641px) and (max-width: 1200px){
     .trend {
      width: calc(50% - 3px);
     }
   }
-  @media (max-width:640px) {
-    .trend {
-      width: 100%;
-    }
-  }
+  
