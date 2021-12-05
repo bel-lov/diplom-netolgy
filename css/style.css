@@ -667,7 +667,8 @@ visibility: hidden;
     background: none;
     border: none;
   }
-.aside, .main-content {
+.aside, .main-content,
+ .product, .footer {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
