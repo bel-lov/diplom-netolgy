@@ -673,6 +673,9 @@ visibility: hidden;
   margin-right: auto;
   margin-bottom: 40px;
 }
+.container {
+  margin-right: 0;
+}
 }
 
 @media (min-width: 641px) and (max-width: 1200px) {
