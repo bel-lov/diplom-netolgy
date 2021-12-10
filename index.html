@@ -20,7 +20,7 @@
           <li><a href="0#">Статьи</a></li>
           <li><a href="0#">Теги</a></li>
           <li><a href="0#">Темы</a></li>
-           <li><a href="0#">Контакты</a></li>
+           <li class="contacts"><a href="0#">Контакты</a></li>
         </ul>
         <button class="nav">
           <span class="burger"></span>
@@ -44,7 +44,7 @@
           </div>
         </div>
 
-        <div class="trend trend_second">
+        <div class="trend trend-second">
           <div class="post-trend">
             <ul>
               <li class="hashtag"><a href="#0">Food
@@ -56,7 +56,7 @@
           </div>
         </div>
 
-        <div class="trend trend_third">
+        <div class="trend trend-third">
           <div class="post-trend">
             <ul>
               <li class="hashtag"><a href="#0">Lifestyle</a></li>
@@ -66,7 +66,7 @@
           </div>
         </div>
 
-        <div class="trend trend_fourth">
+        <div class="trend trend-fourth">
           <div class="post-trend">
             <ul>
               <li class="hashtag"><a href="#0">Food
@@ -80,8 +80,7 @@
       </div>
     </section>
     
-    <div class="page">
-
+    <div class="page wrapper">
     <div class="popup-container hidden">
         <div class="popup shown" id="popup">
 
@@ -105,7 +104,7 @@
             </div>
 
             <div class="form-row">
-              <label class="form-group__title" for="poll-content">
+              <label class="form-group-title" for="poll-content">
                 Расскажите, какой контент вы бы хотели видеть на нашем сайте?
               </label>
               <textarea class="textarea" cols="27" rows="5" placeholder="Может, больше рецептов?" required></textarea>
@@ -117,10 +116,9 @@
         </div>
       </div>
 
-
     <main class="main-content">
       <article class="posts">
-        <div class="img">
+        <div class="image-box">
               <img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post1.jpg" alt="10 мест ради которых стоит проснуться на рассвете" class="img-post">
         </div>
         <div class="text-post">
@@ -131,35 +129,39 @@
            </ul>
           <h2 class="title_post"><a href="#0">10 мест, ради которых стоит проснуться на рассвете</a></h2>
          <time datetime="2019-06-10" class="date">10 июня 2019</time>
-          <cite class="autor">Неизвестный автор</cite>
+          <span class="autor">Неизвестный автор</span>
           
-          <p class="post1">Итак, вы в Питере. Раннее утро. Лед с рек и каналов уже ушел, запущены фонтаны города… Музеи еще закрыты. Что посмотреть?</p>
+          <div>
+            <span class="post-description">Итак, вы в Питере. Раннее утро. Лед с рек и каналов уже ушел, запущены фонтаны города… Музеи еще закрыты. Что посмотреть?</span>
+          </div> 
         
       </section>
       </div>
          </article>
       <article class="posts">
-        <div class="img">
-              <img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post2.jpg" alt="10 мест ради которых стоит проснуться на рассвете" class="img-post">
+        <div class="image-box">
+          <img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post2.jpg"
+            alt="10 мест ради которых стоит проснуться на рассвете" class="img-post">
         </div>
         <div class="text-post">
           <section class="info">
-           <ul>
-             <li class="hashtag"><a href="#0">health</a></li>
-             <li class="hashtag"><a href="#0">lifestyle</a></li>
-           </ul>
-          <h2 class="title_post"><a href="#0">ЙОга для начинающих в
-    домашних условиях</a></h2>
-         <time datetime="2019-06-10" class="date">10 июня 2019</time>
-          <cite class="autor">Неизвестный автор</cite>
-          
-          <p class="post1"> Расскажем, какие упражнения выбрать и как сделать коврик для занятий йогой из того, что можно найти в шкафу.
-     </p>
-      </section>
-      </div>
-         </article>
+            <ul>
+              <li class="hashtag"><a href="#0">health</a></li>
+              <li class="hashtag"><a href="#0">lifestyle</a></li>
+            </ul>
+            <h2 class="title_post"><a href="#0">ЙОга для начинающих в
+                домашних условиях</a></h2>
+            <time datetime="2019-06-10" class="date">10 июня 2019</time>
+            <span class="autor">Неизвестный автор</span>
+            <div>
+              <span class="post-description">Расскажем, какие упражнения выбрать и как сделать коврик для занятий йогой
+                из того, что можно найти в шкафу.</span>
+            </div>
+          </section>
+        </div>
+      </article>
       <article class="posts">
-        <div class="img">
+        <div class="image-box">
               <img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post3.jpg" alt="10 мест ради которых стоит проснуться на рассвете" class="img-post">
         </div>
         <div class="text-post">
@@ -170,7 +172,7 @@
           <h2 class="title_post"><a href="#0">Лучшие музыкальные
     фестивали этого лета</a></h2>
          <time datetime="2019-06-10" class="date">10 июня 2019</time>
-          <cite class="autor">Неизвестный автор</cite>
+          <span class="autor">Неизвестный автор</span>
           
           <p class="post1"> Лето на носу, а с ним и музыкальные фестивали. На каком же из них вы разобьёте свою палатку?
           </p>
@@ -181,50 +183,53 @@
       </div>
          </article>
       <article class="posts">
-        <div class="img">
-              <img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post4.jpg" alt="10 мест ради которых стоит проснуться на рассвете" class="img-post">
+        <div class="image-box">
+          <img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post4.jpg"
+            alt="10 мест ради которых стоит проснуться на рассвете" class="img-post">
         </div>
         <div class="text-post">
           <section class="info">
-           <ul>
-             <li class="hashtag"><a href="#0">LYFESTYLE  </a></li>
-             <li class="hashtag"><a href="#0">FOOD</a></li>
-           </ul>
-          <h2 class="title_post"><a href="#0">Наукоёмкий подход к
-    кулинарии</a></h2>
-         <time datetime="2019-06-10" class="date">10 июня 2019</time>
-          <cite class="autor">Неизвестный автор</cite>
-          
-          <p class="post1"> Узнаем основы проектирования новых пищевых и около-пищевых опытов, вскроем физику, химию и микробиологию еды.
-     </p>
-        
-      </section>
-      </div>
-         </article>
+            <ul>
+              <li class="hashtag"><a href="#0">LYFESTYLE </a></li>
+              <li class="hashtag"><a href="#0">FOOD</a></li>
+            </ul>
+            <h2 class="title_post"><a href="#0">Наукоёмкий подход к
+                кулинарии</a></h2>
+            <time datetime="2019-06-10" class="date">10 июня 2019</time>
+            <span class="autor">Неизвестный автор</span>
+            <div>
+              <span class="post-description">Узнаем основы проектирования новых пищевых и около-пищевых опытов, вскроем
+                физику, химию и микробиологию еды.</span>
+            </div>
+
+          </section>
+        </div>
+      </article>
       <article class="posts">
-        <div class="img">
-              <img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post5.jpg" alt="10 мест ради которых стоит проснуться на рассвете" class="img-post">
+        <div class="image-box">
+          <img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post5.jpg"
+            alt="10 мест ради которых стоит проснуться на рассвете" class="img-post">
         </div>
         <div class="text-post">
           <section class="info">
-           <ul>
-             <li class="hashtag"><a href="#0">LYFESTYLE</a></li>
-             <li class="hashtag"><a href="#0">INTERIOR</a></li>
-             <li class="hashtag"><a href="#0">art</a></li>
-           </ul>
-          <h2 class="title_post"><a href="#0">делаем модные принты на
-    подушках для интерьера </a></h2>
-         <time datetime="2019-06-10" class="date">10 июня 2019</time>
-          <cite class="autor">Неизвестный автор</cite>
-          
-          <p class="post1"> Подушки для дивана целесообразнее заказать в съемных чехлах на молнии, если потребуется чистка подушек, проще снять чехлы, чем везти подушку в химчистку.
-     </p>
-        
-      </section>
-      </div>
-         </article>
+            <ul>
+              <li class="hashtag"><a href="#0">LYFESTYLE</a></li>
+              <li class="hashtag"><a href="#0">INTERIOR</a></li>
+              <li class="hashtag"><a href="#0">art</a></li>
+            </ul>
+            <h2 class="title_post"><a href="#0">делаем модные принты на
+                подушках для интерьера </a></h2>
+            <time datetime="2019-06-10" class="date">10 июня 2019</time>
+            <span class="autor">Неизвестный автор</span>
+            <div>
+              <span class="post-description">Подушки для дивана целесообразнее заказать в съемных чехлах на молнии, если
+                потребуется чистка подушек, проще снять чехлы, чем везти подушку в химчистку.</span>
+            </div>
+          </section>
+        </div>
+      </article>
       <article class="posts">
-        <div class="img">
+        <div class="image-box">
               <img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post6.jpg" alt="10 мест ради которых стоит проснуться на рассвете" class="img-post">
         </div>
         <div class="text-post">
@@ -236,16 +241,15 @@
           <h2 class="title_post"><a href="#0">Как первый раз отправиться
     в горы?</a></h2>
          <time datetime="2019-06-10" class="date">10 июня 2019</time>
-          <cite class="autor">Неизвестный автор</cite>
-          
-          <p class="post1"> Для начала нужно определиться, в каком формате пройдёт ваше путешествие. Это зависит от многих факторов, не только от ваших желаний и интересов.
-     </p>
-        
+          <span class="autor">Неизвестный автор</span>
+          <div>
+            <span class="post-description">Для начала нужно определиться, в каком формате пройдёт ваше путешествие. Это зависит от многих факторов, не только от ваших желаний и интересов.</span>
+          </div>
       </section>
       </div>
          </article>
       <article class="posts">
-        <div class="img">
+        <div class="image-box">
               <img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post4.jpg" alt="10 мест ради которых стоит проснуться на рассвете" class="img-post">
         </div>
         <div class="text-post">
@@ -257,11 +261,10 @@
           <h2 class="title_post"><a href="#0">Наукоёмкий подход к
     кулинарии</a></h2>
          <time datetime="2019-06-10" class="date">10 июня 2019</time>
-          <cite class="autor">Неизвестный автор</cite>
-          
-          <p class="post1"> Узнаем основы проектирования новых пищевых и около-пищевых опытов, вскроем физику, химию и микробиологию еды.
-     </p>
-        
+          <span class="autor">Неизвестный автор</span>
+          <div>
+            <span class="post-description">Узнаем основы проектирования новых пищевых и около-пищевых опытов, вскроем физику, химию и микробиологию еды.</span>
+          </div>
       </section>
       </div>
          </article>
@@ -270,43 +273,43 @@
     <aside class="aside">
       <div class="news">
           <h2 class="list_title">Новые посты</h2>
-        <div class="new">
+        <div class="new-wrapper-post">
           <img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post1.jpg" alt="10 мест, ради которых стоит проснуться" class="img_post_news">
              
-            <div class="box">
+            <div class="box-preview">
              <time datetime="2019-06-14" class="date">14 июня 2019</time>
             <h3 class="title_aside">10 мест, ради которых стоит проснуться</h3>
               </div>
           </div>
-        <div class="new">
+        <div class="new-wrapper-post">
               <img src="https://netology-code.github.io/html-2-diploma/sources/images/151.jpg" alt="Йога для домашних" class="img_post_news">
-             <div class="box">
+             <div class="box-preview">
              <time datetime="2019-06-14" class="date">14 июня 2019</time>
              <h3 class="title_aside">Йога для домашних</h3>
               </div>
           </div>
-        <div class="new">
+        <div class="new-wrapper-post">
            <img src="https://netology-code.github.io/html-2-diploma/sources/images/45.jpg" alt="как мы превратили классное место в балкон" class="img_post_news">
-            <div class="box">
+            <div class="box-preview">
             <time datetime="2019-06-14" class="date">14 июня 2019</time>
             <h3 class="title_aside">как мы превратили классное место в балкон</h3>
               </div>
           </div>
-        <div class="new">
+        <div class="new-wrapper-post">
            
             <img src="https://netology-code.github.io/html-2-diploma/sources/images/501.jpg" alt="Кулинарный подход к науке" class="img_post_news">
              
-            <div class="box">
+            <div class="box-preview">
              <time datetime="2019-06-14" class="date">14 июня 2019</time>
             <h3 class="title_aside">Кулинарный подход к науке</h3>
               </div>
           </div>
-        <div class="new">
+        <div class="new-wrapper-post">
            
             <img src="https://netology-code.github.io/html-2-diploma/sources/images/7.jpg" alt="Лучшие прически для
     распущенных волос" class="img_post_news">
              
-            <div class="box">
+            <div class="box-preview">
              <time datetime="2019-06-14" class="date">14 июня 2019</time>
             <h3 class="title_aside">Лучшие прически для распущенных волос</h3>
               </div>
@@ -385,10 +388,10 @@
 
     <section>
       <h2 class="title-cards">Наши изделия</h2>
-           <div class="product">
+           <div class="product wrapper">
            <article class="card">
              <div class="img-card">
-               <img src="../images/shop-item-desk1.jpg" alt="Подушки на диван">
+               <img src="https://github.com/bel-lov/diplom-netolgy/blob/main/images/shop-item-desk1.jpg" alt="Подушки на диван">
              </div>
              <div class="shop">
              <div class="shop-item">
@@ -397,8 +400,8 @@
              </div>
              <div class="price">
                <div class="coint">
-                <p class="through">1000 Р</p>
-                <p class="coint-bold">800 Р</p>
+                <p class="total-price">1000 Р</p>
+                <p class="discount-price">800 Р</p>
                </div>
               <a href="#" class="shop-link">В магазин</a>
              </div>
@@ -407,7 +410,7 @@
 
            <article class="card">
             <div class="img-card">
-              <img src="../images/shop-item-desk2.jpg" alt="Кукла «Зайчик»">
+              <img src="./images/shop-item-desk2.jpg" alt="Кукла «Зайчик»">
             </div>
             <div class="shop">
             <div class="shop-item">
@@ -418,7 +421,7 @@
             </div>
             <div class="price">
               <div class="coint">
-               <p class="coint-bold">3500 Р</p>
+               <p class="discount-price">3500 Р</p>
              </div>
              <a href="#" class="shop-link">В магазин</a>
             </div>
@@ -427,7 +430,7 @@
 
           <article class="card">
             <div class="img-card">
-              <img src="../images/shop-item-desk3.jpg" alt="Шестиугольная рамка">
+              <img src="images/shop-item-desk3.jpg" alt="Шестиугольная рамка">
             </div>
             <div class="shop">
             <div class="shop-item">
@@ -438,8 +441,8 @@
             </div>
             <div class="price">
               <div class="coint">
-               <p class="through">500 Р</p>
-               <p class="coint-bold">400 Р</p>
+               <p class="total-price">500 Р</p>
+               <p class="discount-price">400 Р</p>
               </div>
              <a href="#" class="shop-link">В магазин</a>
             </div>
