@@ -1,37 +1,42 @@
 @font-face {
-  font-family: "OpenSans";
-  src: url("fonts/opensans.woff2") format("woff2"),
-        url("fonts/opensans.woff") format("woff");
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+        url('../fonts/OpenSans-Regular.ttf') format('truetype'),
+        url('../fonts/OpenSans-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: "OpenSans";
-  src: url("fonts/opensans.woff2") format("woff2"),
-        url("fonts/opensans.woff") format("woff");
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+       url('../fonts/OpenSans-Bold.ttf') format('truetype'),
+        url('../fonts/OpenSans-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
-
 body {
-  font-family: "OpenSans";
+  font-family: 'Open Sans', Arial, sans-serif;
 }
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-
 li {
   list-style-type: none;
 }
-
 a {
   text-decoration: none;
 }
-
+button:focus, input:focus, a:focus {
+ outline: none;
+}
 .header {
+  max-width: 1800px;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 40px;
   background-color: #6d6c69;
   background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
@@ -43,7 +48,6 @@ a {
   padding-bottom: 130px;
   z-index: 0;
 }
-
 .header::after {
   content: "";
   background-color: #000000;
@@ -55,7 +59,6 @@ a {
   opacity: 0.6;
   z-index: -1;
 }
-
 .menu {
   max-width: 1170px;
   margin-right: auto;
@@ -65,24 +68,17 @@ a {
   align-items: center;
   margin-bottom: 105px;
 }
-
 .logo_img {
   width: 190px;
 }
-
-.menu-nav li {
+.menu-nav-item {
   font-size: 13px;
   display: inline;
   text-transform: uppercase;
   margin-right: 30px;
 }
-
-.menu-nav li a {
+.menu-nav-link {
   color: #fff;
-}
-
-.menu-nav .contacts {
-  margin-right: 0;
 }
 .nav {
   width: 35px;
@@ -94,14 +90,12 @@ a {
   border: none;
   display: none;
 }
-
 .burger {
   width: 100%;
   height: 4px;
   background: #ffffff;
   position: relative;
 }
-
 .burger::before {
   width: 100%;
   height: 4px;
@@ -120,7 +114,6 @@ a {
   bottom: -10px;
   left: 0;
 }
-
 .title {
   font-size: 45px;
   line-height: 1.6;
@@ -132,7 +125,10 @@ a {
   color: #fff;
   text-transform: uppercase;
 }
-
+.wrapper-trend {
+  margin-right: auto;
+  margin-left: auto;
+}
 .wrapper {
   max-width: 1160px;
   margin-right: auto;
@@ -184,15 +180,9 @@ a {
   margin-right: 3px;
   z-index: 0;
 }
-
 .trend:last-child {
   margin-right: 0;
 }
-
-/*.menu-nav {
-  display: none;
-}*/
-
 .trend::before {
   position: absolute;
   content: "";
@@ -221,7 +211,6 @@ a {
   border: 4px solid #b59f5b;
   padding-left: 28px;
 }
-
 .popup {
   position: fixed;
   top: 0;
@@ -250,11 +239,9 @@ a {
   background: #fff;
   position: relative;
 }
-
 .form-row {
   margin-bottom: 20px;
 }
-
 .select {
   display: inline-block;
   box-sizing: border-box;
@@ -273,7 +260,6 @@ a {
   background-position: right 5px center;
   margin-top: 20px;
 }
-
 .close {
   width: 30px;
   height: 30px;
@@ -301,43 +287,52 @@ visibility: hidden;
 }
 .main-content {
   max-width: 778px;
-  width: 66%;
+  flex-grow: 1;
   margin-right: 38px;
 }
-
 .posts {
   display: flex;
+  justify-content: space-between;
   margin-bottom: 60px;
+}
+.text-post {
+  max-width: 778px;
 }
 .wrapper_image{
   width: 200px;
 }
-
-.image-box {
-  max-width: 380px;
+.image-box-post {
+  width: 100%;
+  height: auto;
   margin-right: 30px;
 }
-
 .img-post {
-  width: 100%;;
+  width: 380px;
+  height: auto;
 }
-
 .hashtag {
   display: inline-block;
   flex-wrap: wrap;
 }
-
-.hashtag a {
+.hashtag-link {
   text-transform: uppercase;
   font-size: 14px;
   font-weight: bold;
   color: #b59f5b;
   line-height: 2.8;
-  margin-right: 15px;
+  margin-right: 15px; 
 }
-
+.hashtag-link:hover {
+  text-decoration: underline;
+}
 .title_post a,
-.title-card,
+.title-card {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0f0d0e;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
 .discount-price {
   font-size: 20px;
   font-weight: bold;
@@ -345,29 +340,25 @@ visibility: hidden;
   text-transform: uppercase;
   line-height: 1.2;
 }
-
 .title_post {
   margin-bottom: 30px;
 }
-
 .date {
-  display: block;
-  font-size: 12px;
-  color: #888888;
   margin-right: 10px;
+  font-size: 12px;
+  line-height: 1.3;
+  color: #999999;
 }
 .box-preview {
   display: block;
 }
-
 .autor {
   font-size: 12px;
   font-weight: bold;
   font-style: normal;
   color: #000000;
 }
-
-.post-description {
+.post1 {
   font-size: 15px;
   line-height: 1.4;
   margin-top: 50px;
@@ -375,26 +366,21 @@ visibility: hidden;
 .post2 {
   margin-top: 5px;
 }
-
 .aside {
   width: 272px;
   flex-shrink: 0;
 }
-
-.news {
+.news-container {
   margin-bottom: 50px;
 }
-
 .list_title {
   font-size: 14px;
   font-weight: bold;
   line-height: 2;
   color: #0f0d0e;
   text-align: center;
-  /*   margin-bottom: 15px; */
   text-transform: uppercase;
 }
-
 .list_title::after {
   content: "";
   display: block;
@@ -403,16 +389,9 @@ visibility: hidden;
   background-color: #baa566;
   margin: 15px auto 28px;
 }
-
 .new-wrapper-post {
   display: flex;
   margin-bottom: 10px;
-}
-
-.date {
-  font-size: 12px;
-  line-height: 1.3;
-  color: #999999;
 }
 .product {
   max-width: 1160px;
@@ -423,6 +402,8 @@ visibility: hidden;
 }
 .card {
   max-width: 350px;
+  display: flex;
+  flex-direction: column;
 }
 .img-card {
   position: relative;
@@ -435,6 +416,7 @@ visibility: hidden;
   width: 350px;
   padding: 20px;
   margin-bottom: 26px;
+  flex-grow: 1;
 }
 .shop-item {
   margin-top: 50px;
@@ -445,8 +427,8 @@ visibility: hidden;
   align-items: center;
   margin-top: 21px;
 }
-
 .shop-link {
+  display: inline-block;
   height: 50px;
   font-size: 14px;
   font-weight: bold;
@@ -455,6 +437,10 @@ visibility: hidden;
   text-transform: uppercase;
   border: none;
   padding: 16px 28px;
+}
+.shop-link:hover {
+  transition: all 0.2s;
+  border: 4px solid #b59f5b 
 }
 .card-text {
   font-size: 15px;
@@ -465,7 +451,7 @@ visibility: hidden;
   font-size: 14px;
   font-weight: bold;
 }
-.transfer {
+.card-text-link {
   color: #b59f5b;
 }
 .title_aside {
@@ -474,26 +460,21 @@ visibility: hidden;
   line-height: 1.3;
   text-transform: uppercase;
 }
-
 .img_post_news {
   width: 70px;
   height: 70px;
   margin-right: 15px;
 }
-
 .form {
   margin-bottom: 60px;
 }
-
 .search {
   display: flex;
   margin-bottom: 20px;
 }
-
 .search-group {
-  width: 220px;
+  width: 100%;
 }
-
 .field {
   box-sizing: border-box;
   font-size: 13px;
@@ -504,7 +485,6 @@ visibility: hidden;
   padding-right: 20px;
   border: none;
 }
-
 .button {
   width: 50px;
   height: 50px;
@@ -515,15 +495,12 @@ visibility: hidden;
   background-size: 22px auto;
   border: none;
 }
-
 .mailing {
   margin-bottom: 60px;
 }
-
 .group_mail {
-  width: 270px;
+  width: 100%;
 }
-
 .field_mail {
   font-size: 13px;
   background-color: #f4f7f6;
@@ -533,7 +510,6 @@ visibility: hidden;
   padding-right: 20px;
   border: none;
 }
-
 .button_mail {
   width: 100%;
   height: 50px;
@@ -544,7 +520,12 @@ visibility: hidden;
   text-transform: uppercase;
   border: none;
 }
-
+.button_mail:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+.button_mail:active {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
 .screen-reader-text {
   position: absolute;
   width: 1px;
@@ -555,22 +536,18 @@ visibility: hidden;
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
-.tag_list {
+.tag-list {
   display: flex;
   flex-wrap: wrap;
 }
-
 .tag {
   margin-bottom: 60px;
 }
-
-.tag_point {
-  margin-right: 10px;
+.tag-point {
+  margin-right: 8px;
   margin-bottom: 6px;
 }
-
-.tag_point a {
+.tag-point-link {
   display: inline-block;
   font-size: 12px;
   font-weight: bold;
@@ -579,12 +556,10 @@ visibility: hidden;
   color: black;
   text-transform: uppercase;
 }
-
-.topics_list a {
+.topics-list-link {
   color: black;
 }
-
-.topics_list {
+.topics-list {
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px;
   padding-top: 10px;
@@ -600,18 +575,15 @@ visibility: hidden;
   margin-left: auto;
   margin-top: 65px;
 }
-
 .social-footer {
   padding-top: 32px;
   padding-bottom: 32px;
   background-color: #f4f7f6;
 }
-
 .footer_list {
   display: flex;
   justify-content: center;
 }
-
 .social_icon a {
   display: block;
   width: 23px;
@@ -620,27 +592,22 @@ visibility: hidden;
   background-position: center center;
   background-size: 16px;
 }
-
 .social_icon_twitter {
   background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/004-twitter.svg");
   margin-right: 25px;
 }
-
 .social_icon_pinterest {
   background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/001-pinterest.svg");
   margin-right: 25px;
 }
-
 .social_icon_facebook {
   background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/002-facebook-logo.svg");
   margin-right: 25px;
 }
-
 .social-icon_instagram {
   background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/005-instagram.svg");
   margin-right: 25px;
 }
-
 .social_icon_tumblr {
   background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg");
 }
@@ -659,12 +626,28 @@ visibility: hidden;
   .trend:last-child {
     margin-bottom: 0;
   }
+  .image-box-post {
+    margin-right: 0;
+  }
   .posts,.product,
   .wrapper-trend, .page {
     flex-wrap: wrap;
   }
-  .main-content {
+  .posts::after {
+    content:"";
+    display: block;
     width: 100%;
+    height: 3px;
+    background-color: #eeeeee;
+    margin-top: 23px;  
+    margin-bottom: 34px;
+    }
+  .main-content,.aside {
+    width: 100%;
+  }
+  .img-post {
+    width: 100%;
+    height: auto;
   }
   .menu-nav {
     display: none;
@@ -678,7 +661,7 @@ visibility: hidden;
     background: none;
     border: none;
   }
-.aside, .main-content,
+ .main-content,
  .product, .footer {
   margin-left: auto;
   margin-right: auto;
@@ -688,20 +671,36 @@ visibility: hidden;
   margin-right: 0;
 }
 }
-
 @media (min-width: 641px) and (max-width: 1200px) {
   .trend {
     width: calc(50% - 3px);
     margin-right: 3px;
     margin-bottom: 3px;
   }
-  
+  .image-box-post {
+    margin-right: 0;
+  }
+  .img-post {
+    width: 100%;
+    height: auto;
+  }
   .posts {
     flex-wrap: wrap;
   }
+  .posts::after {
+    content:"";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #eeeeee;
+    margin-top: 23px;  
+    margin-bottom: 34px;
+    }
   .product {
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-right: auto;
+    margin-left: auto;
   }
   .menu-nav {
     display: none;
